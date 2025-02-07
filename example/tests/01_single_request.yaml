@@ -1,0 +1,8 @@
+runner: main
+steps:
+  - target: client
+    command: getvalue
+    args: [ "0" ]
+  - target: server
+    command: verifyserver
+    args: [ "2" ]

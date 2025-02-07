@@ -1,0 +1,19 @@
+version: '3.9'
+services:
+  client:
+    image: example/client
+    networks:
+      net:
+        ipv4_address: 192.168.0.4
+  server:
+    image: example/server
+    networks:
+      net:
+        ipv4_address: 192.168.0.5
+
+networks:
+  net:
+    driver: bridge
+    ipam:
+      config:
+      - subnet: 192.168.0.0/24

@@ -1,0 +1,12 @@
+build:
+  - name: example/server
+    folder: docker/server
+    engine: Docker
+  - name: example/client
+    folder: docker/client
+    engine: Docker
+
+tests:
+  - commands:
+    - test_commands/
+  - tests/

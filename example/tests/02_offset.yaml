@@ -1,0 +1,11 @@
+runner: main
+steps:
+  - target: server
+    command: setserver
+    args: [ "12" ]
+  - target: client
+    command: getvalue
+    args: [ "12" ]
+  - target: server
+    command: verifyserver
+    args: [ "13" ]
